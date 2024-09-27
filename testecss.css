@@ -1,0 +1,103 @@
+.nome {
+     color: rgb(255, 0, 0);
+     font-family: "Kode Mono", monospace;
+     font-optical-sizing: auto;
+     font-weight: weight;
+     font-style: normal;
+     font-size: 70px;
+     font-weight: 700;
+}
+
+.nome samp {
+     position: relative;
+}
+
+.nome span::before {
+     content: attr(data-content);
+     color: rgb(195, 0, 255);
+     animation: palavras 20s infinite;
+}
+
+.nome span::after {
+     content: '';
+     position: absolute;
+     height: 100%;
+     border-left: 2px solid rgb(195, 0, 255);
+     right: -10px;
+     animation: cursor .8s infinite, digita 20s steps(15) infinite;
+     width: calc(100% + 18px);
+     background-color: rgb(29, 31, 48);
+
+     ;
+}
+
+@keyframes digita {
+
+     0%,
+     15%,
+     30%,
+     35%,
+     50%,
+     55%,
+     70%,
+     75%,
+     90%,
+     95% {
+          width: 0px;
+     }
+
+     5%,
+     20%,
+     25%,
+     40%,
+     45%,
+     60%,
+     65%,
+     80%,
+     85% {
+          width: calc(100% + 18px);
+     }
+}
+
+@keyframes cursor {
+     0% {
+          border-left: 2px solid rgb(29, 31, 48);
+     }
+
+
+}
+
+@keyframes palavras {
+
+     0%,
+     20% {
+          content: 'palavra 1';
+     }
+
+     21%,
+     40% {
+          content: 'palavra 2';
+     }
+
+     41%,
+     60% {
+          content: 'palavra 3';
+     }
+
+     61%,
+     80% {
+          content: 'palavra 4';
+     }
+
+     81%,
+     100% {
+          content: 'palavra 5';
+     }
+
+}
+
+
+
+
+
+/* */
